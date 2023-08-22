@@ -1,0 +1,84 @@
+{
+    "teachers": [
+      {
+        "id": 1,
+        "name": "Krishna"
+      },
+      {
+        "id": 2,
+        "name": "Raj"
+      },
+      {
+        "id": 3,
+        "name": "Lakshmi"
+      },
+      {
+        "id": 4,
+        "name": "Ganesh"
+      },
+      {
+        "id": 5,
+        "name": "Uma"
+      },
+      {
+        "id": 6,
+        "name": "Amit"
+      },
+      {
+        "id": 7,
+        "name": "Rajesh"
+      },
+      {
+        "id": 8,
+        "name": "Ravi"
+      },
+      {
+        "id": 9,
+        "name": "sanjay"
+      },
+      {
+        "id": 10,
+        "name": "Dillip"
+      },
+      {
+        "id": 11,
+        "name": "Gopal"
+      },
+      {
+        "id": 12,
+        "name": "Kamal"
+      },
+      {
+        "id": 13,
+        "name": "Shankar"
+      },
+      {
+        "id": 14,
+        "name": "Manoj"
+      },
+      {
+        "id": 15,
+        "name": "Rahul"
+      },
+      {
+        "id": 16,
+        "name": "Arun"
+      },
+      {
+        "id": 17,
+        "name": "Omkar"
+      },
+      {
+        "id": 18,
+        "name": "Pratyush"
+      },
+      {
+        "id": 19,
+        "name": "Kiran"
+      },
+      {
+        "id": 20,
+        "name": "Ashok"
+      }
+    ]
+  }
