@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/tbc-teacher-voting/static/css/main.49917aaf.css",
-    "main.js": "/tbc-teacher-voting/static/js/main.3332177e.js",
+    "main.js": "/tbc-teacher-voting/static/js/main.edc3688b.js",
     "static/media/img1.jpeg": "/tbc-teacher-voting/static/media/img1.825ab01c3d7260d4238a.jpeg",
     "static/media/fa-solid-900.ttf": "/tbc-teacher-voting/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/tbc-teacher-voting/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/img5.jpeg": "/tbc-teacher-voting/static/media/img5.d90f61091f9d86503ba8.jpeg",
     "static/media/fa-solid-900.woff2": "/tbc-teacher-voting/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/img8.jpeg": "/tbc-teacher-voting/static/media/img8.df178dd2503c6871a2ec.jpeg",
+    "static/media/img11.jpeg": "/tbc-teacher-voting/static/media/img11.f8f0cb2f3ff2fd7370f5.jpeg",
     "static/media/Vote For MOST LOVED TEACHER OF BHONSOR.jpg": "/tbc-teacher-voting/static/media/Vote For MOST LOVED TEACHER OF BHONSOR.09e78b5dd3eb25de63cd.jpg",
     "static/media/img2.jpeg": "/tbc-teacher-voting/static/media/img2.dfc9610085d5cee404d8.jpeg",
     "static/media/img10.jpeg": "/tbc-teacher-voting/static/media/img10.6a7f218621e2e5eb81b3.jpeg",
@@ -23,10 +24,10 @@
     "static/media/fa-v4compatibility.woff2": "/tbc-teacher-voting/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/tbc-teacher-voting/index.html",
     "main.49917aaf.css.map": "/tbc-teacher-voting/static/css/main.49917aaf.css.map",
-    "main.3332177e.js.map": "/tbc-teacher-voting/static/js/main.3332177e.js.map"
+    "main.edc3688b.js.map": "/tbc-teacher-voting/static/js/main.edc3688b.js.map"
   },
   "entrypoints": [
     "static/css/main.49917aaf.css",
-    "static/js/main.3332177e.js"
+    "static/js/main.edc3688b.js"
   ]
 }
