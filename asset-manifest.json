@@ -1,21 +1,32 @@
 {
   "files": {
-    "main.css": "/tbc-teacher-voting/static/css/main.525b15e6.css",
-    "main.js": "/tbc-teacher-voting/static/js/main.3e80bf46.js",
+    "main.css": "/tbc-teacher-voting/static/css/main.49917aaf.css",
+    "main.js": "/tbc-teacher-voting/static/js/main.676f4532.js",
+    "static/media/img1.jpeg": "/tbc-teacher-voting/static/media/img1.825ab01c3d7260d4238a.jpeg",
     "static/media/fa-solid-900.ttf": "/tbc-teacher-voting/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/tbc-teacher-voting/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/img5.jpeg": "/tbc-teacher-voting/static/media/img5.d90f61091f9d86503ba8.jpeg",
     "static/media/fa-solid-900.woff2": "/tbc-teacher-voting/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/img8.jpeg": "/tbc-teacher-voting/static/media/img8.df178dd2503c6871a2ec.jpeg",
+    "static/media/Vote For MOST LOVED TEACHER OF BHONSOR.jpg": "/tbc-teacher-voting/static/media/Vote For MOST LOVED TEACHER OF BHONSOR.09e78b5dd3eb25de63cd.jpg",
+    "static/media/img2.jpeg": "/tbc-teacher-voting/static/media/img2.dfc9610085d5cee404d8.jpeg",
+    "static/media/img10.jpeg": "/tbc-teacher-voting/static/media/img10.6a7f218621e2e5eb81b3.jpeg",
+    "static/media/img4.jpeg": "/tbc-teacher-voting/static/media/img4.86b181d7e29a2cbdb19c.jpeg",
     "static/media/fa-brands-400.woff2": "/tbc-teacher-voting/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/img6.jpeg": "/tbc-teacher-voting/static/media/img6.7a5ecea5864fc1876f00.jpeg",
+    "static/media/img7.jpeg": "/tbc-teacher-voting/static/media/img7.9ffb9762870ac2356d11.jpeg",
     "static/media/fa-regular-400.ttf": "/tbc-teacher-voting/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/img9.jpeg": "/tbc-teacher-voting/static/media/img9.f3c216f7d0fffbe0c629.jpeg",
+    "static/media/img3.jpeg": "/tbc-teacher-voting/static/media/img3.6b08f492c80cc4aa766a.jpeg",
     "static/media/fa-regular-400.woff2": "/tbc-teacher-voting/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
     "static/media/fa-v4compatibility.ttf": "/tbc-teacher-voting/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/tbc-teacher-voting/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/tbc-teacher-voting/index.html",
-    "main.525b15e6.css.map": "/tbc-teacher-voting/static/css/main.525b15e6.css.map",
-    "main.3e80bf46.js.map": "/tbc-teacher-voting/static/js/main.3e80bf46.js.map"
+    "main.49917aaf.css.map": "/tbc-teacher-voting/static/css/main.49917aaf.css.map",
+    "main.676f4532.js.map": "/tbc-teacher-voting/static/js/main.676f4532.js.map"
   },
   "entrypoints": [
-    "static/css/main.525b15e6.css",
-    "static/js/main.3e80bf46.js"
+    "static/css/main.49917aaf.css",
+    "static/js/main.676f4532.js"
   ]
 }
