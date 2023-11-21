@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   MDBBtn,
   MDBCarousel,
@@ -24,17 +24,40 @@ import {
 // import { FcSearch } from 'react-icons/fc'
 import { TbSend } from 'react-icons/tb'
 import data from './data.json';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import bgImg from './img/Vote For MOST LOVED TEACHER OF BHONSOR.jpg'
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import required modules
+import { Pagination } from 'swiper/modules';
+
+
+
 
 function App() {
+
+  var width = window.screen.width;
 
   const [basicModal, setBasicModal] = useState(false);
 
   const toggleShow = () => setBasicModal(!basicModal);
   const ref = useRef(null);
   const [message, setMessage] = useState('');
-  const modalName = () => {
+  const modalName = (e) => {
     setMessage(ref.current.id);
   }
+
+  const [ipAddress, setIPAddress] = useState('')
+
+  useEffect(() => {
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => setIPAddress(data.ip))
+      .catch(error => console.log(error))
+  }, []);
+  // console.log(ipAddress)
 
   const [name, setName] = useState('');
   const [num, setNum] = useState('');
@@ -45,7 +68,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTeacher({ message });
-    if (name =='' || num =='') {
+    if (name === '' || num === '') {
       alert("Please enter all the fields!");
     }
     else {
@@ -69,12 +92,12 @@ function App() {
       <div>
         <MDBCarousel>
           <MDBCarouselItem
-            className='w-100 d-block'
+            className='w-100 d-block bgImg'
             itemId={1}
-            src='https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg'
+            src={bgImg}
             alt='...'
           >
-            <MDBBtn color='warning'>Vote Your Favourite Teacher</MDBBtn>
+            {/* <MDBBtn color='warning'>Vote Your Favourite Teacher</MDBBtn> */}
           </MDBCarouselItem>
         </MDBCarousel>
       </div>
@@ -89,88 +112,150 @@ function App() {
           </MDBInputGroup>
         </div> */}
 
-        <div className='d-flex flex-wrap mt-4 justify-content-center'>
-          {data.teachers.map(item => (
-            <>
-              <div className='m-2'>
-                <MDBCard style={{ maxWidth: "300px" }} className='rounded-7 MDCard shadow-5'>
-                  <MDBCardImage
-                    src='https://mdbootstrap.com/img/new/standard/city/041.webp'
-                    alt='...'
-                    position='top'
-                    className='rounded-circle p-2 shadow-5 mx-auto' style={{ width: "12em", height: "12em" }}
-                  />
-                  <MDBCardBody style={{ marginTop: "-0.5em" }}>
-                    <MDBListGroup flush>
-                      <MDBListGroupItem className='text-center fw-bolder' >{item.name}</MDBListGroupItem>
-                    </MDBListGroup>
-                    <MDBCardText className='mt-2'>
-                      This is a longer card with supporting text below as a natural lead-in to additional content.
-                    </MDBCardText>
-                  </MDBCardBody>
-                  {/* <MDBCardFooter className='mx-auto'> */}
-                  <MDBBtn color='warning w-50 mb-3 mx-auto' onClick={() => { toggleShow(); modalName(); }} ref={ref} id={item.name}>Vote Now</MDBBtn>
-                  {/* </MDBCardFooter> */}
-                </MDBCard>
-              </div>
-            </>
-          ))}
+        {width < 670 ?
+          <Swiper
+            spaceBetween={50}
+            pagination={{
+              dynamicBullets: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper mt-4 pb-4"
+            cubeEffect={true}
+            autoplay={true}
+          // onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
 
-
-
-
-
-          <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
-            <MDBModalDialog>
-              <MDBModalContent>
-                <MDBModalHeader>
-                  <MDBModalTitle>Vote for {message}</MDBModalTitle>
-                  <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
-                </MDBModalHeader>
-                <form onSubmit={handleSubmit} method='post' ref={formRef} name="google-sheet">
-                  <MDBModalBody>
+          >
+            {data.teachers.map(item => (
+              <>
+                <SwiperSlide className='swiper-slide'>
+                  <div className='m-2 d-flex justify-content-center'>
+                    <MDBCard style={{ width: "270px" }} className='rounded-7 MDCard shadow-5'>
+                      <MDBCardImage
+                        src={require(`${item.img}`)}
+                        alt='...'
+                        position='top'
+                        className='rounded-circle p-2 shadow-5 mx-auto' style={{ width: "12em", height: "12em" }}
+                      />
+                      <MDBCardBody style={{ marginTop: "-0.5em" }}>
+                        <MDBListGroup flush>
+                          <MDBListGroupItem className='text-center fw-bolder' >{item.name}</MDBListGroupItem>
+                        </MDBListGroup>
+                        <MDBCardText className='mt-2'>
+                          {item.scl}
+                        </MDBCardText>
+                      </MDBCardBody>
+                      {/* <MDBCardFooter className='mx-auto'> */}
+                      <MDBBtn color='warning w-50 mb-3 mx-auto' onClick={() => { toggleShow(); modalName(); }} ref={ref} id={item.name}>Vote Now</MDBBtn>
+                      {/* </MDBCardFooter> */}
+                    </MDBCard>
+                  </div>
+                </SwiperSlide>
+              </>
+            ))}
+          </Swiper>
+          :
+          <div className='d-flex flex-wrap mt-4 justify-content-center'>
+            {data.teachers.map(item => (
+              <>
+                <div className='m-2'>
+                  <MDBCard style={{ width: "270px" }} className='rounded-7 MDCard shadow-5'
+                    data-aos="zoom-in-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out">
                     <MDBCardImage
-                      src='https://mdbootstrap.com/img/new/standard/city/041.webp'
+                      src={require(`${item.img}`)}
                       alt='...'
                       position='top'
-                      className='rounded-circle shadow-5 mx-auto mb-2 ' style={{ width: "12em", height: "12em", marginTop: "-0.5em" }}
+                      className='rounded-circle p-2 shadow-5 mx-auto' style={{ width: "12em", height: "12em" }}
                     />
-                    <div className='my-2'>
-                      <MDBInput label='Your Name' id='form1' type='text' name='name' value={name} onChange={(e) => setName(e.target.value)} />
-                    </div>
-                    <div className='my-2 mt-3'>
-                      <MDBInput label='Your Number' id='form1' type='number' name='number' value={num} onChange={(e) => setNum(e.target.value)} />
-                    </div>
-                    <div className='my-2 mt-3'>
-                      <MDBInput
-                        label="Teacher's Name"
-                        id='formControlReadOnly'
-                        type='text'
-                        readOnly
-                        name='teacher'
-                        value={message}
-                        onChange={(e) => setTeacher(e.target.value)}
-                      />
+                    <MDBCardBody style={{ marginTop: "-0.5em" }}>
+                      <MDBListGroup flush>
+                        <MDBListGroupItem className='text-center fw-bolder' >{item.name}</MDBListGroupItem>
+                      </MDBListGroup>
+                      <MDBCardText className='mt-2'>
+                        {item.scl}
+                      </MDBCardText>
+                    </MDBCardBody>
+                    {/* <MDBCardFooter className='mx-auto'> */}
+                    <MDBBtn color='warning w-50 mb-3 mx-auto' onClick={() => { toggleShow(); modalName(); }} ref={ref} id={item.name}>Vote Now</MDBBtn>
+                    {/* </MDBCardFooter> */}
+                  </MDBCard>
+                </div>
+              </>
+            ))}
+          </div>
+
+        }
+
+
+
+
+
+
+        <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+          <MDBModalDialog>
+            <MDBModalContent>
+              <MDBModalHeader>
+                <MDBModalTitle>Vote for {message}</MDBModalTitle>
+                <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+              </MDBModalHeader>
+              <form onSubmit={handleSubmit} method='post' ref={formRef} name="google-sheet">
+                <MDBModalBody>
+                  {/* <MDBCardImage
+                    src={require(`${mimg}`)}
+                    alt='...'
+                    position='top'
+                    className='rounded-circle shadow-5 mx-auto mb-2 ' style={{ width: "12em", height: "12em", marginTop: "-0.5em" }}
+                  /> */}
+                  <div className='my-2'>
+                    <MDBInput label='Your Name' id='form1' type='text' name='name' value={name} onChange={(e) => setName(e.target.value)} />
+                  </div>
+                  <div className='my-2 mt-3'>
+                    <MDBInput label='Your Number' id='form1' type='number' name='number' value={num} onChange={(e) => setNum(e.target.value)} />
+                  </div>
+                  <div className='my-2 mt-3'>
+                    <MDBInput
+                      label="Teacher's Name"
+                      id='formControlReadOnly'
+                      type='text'
+                      readOnly
+                      name='teacher'
+                      value={message}
+                      onChange={(e) => setTeacher(e.target.value)}
+                    />
+                  </div>
+                  <div style={{display:"none"}}>
+                  <MDBInput
+                      label="ip Address"
+                      id='formControlReadOnly'
+                      type='text'
+                      readOnly
+                      name='ip'
+                      value={ipAddress}
+                      // onChange={(e) => setTeacher(e.target.value)}
+                    />
                     </div>
 
 
-                  </MDBModalBody>
+                </MDBModalBody>
 
-                  <MDBModalFooter>
-                    <MDBBtn color='secondary' onClick={toggleShow}>
-                      Close
-                    </MDBBtn>
-                    <MDBBtn onSubmit={handleSubmit}>Submit&nbsp;&nbsp;<TbSend size={20} /></MDBBtn>
-                  </MDBModalFooter>
-                </form>
-              </MDBModalContent>
-            </MDBModalDialog>
-          </MDBModal>
-        </div>
+                <MDBModalFooter>
+                  <MDBBtn color='secondary' onClick={toggleShow}>
+                    Close
+                  </MDBBtn>
+                  <MDBBtn onSubmit={handleSubmit}>Submit&nbsp;&nbsp;<TbSend size={20} /></MDBBtn>
+                </MDBModalFooter>
+              </form>
+            </MDBModalContent>
+          </MDBModalDialog>
+        </MDBModal>
       </div>
 
-      <div className='text-warning py-1 pt-2 text-center m-auto' style={{backgroundColor:"grey"}}>
-        <h6>© The Bhonsor carnival 2023</h6>
+      <div className='py-1 pt-2 text-center m-auto' style={{ backgroundColor: "grey" }}>
+        <h6 style={{ color: "yellow" }}>© <a style={{ color: "yellow" }} href='https://www.instagram.com/thebhonsorcarnival/'>The Bhonsor carnival 2023</a></h6>
       </div>
     </>
   );

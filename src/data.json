@@ -2,83 +2,69 @@
     "teachers": [
       {
         "id": 1,
-        "name": "Krishna"
+        "scl":"VEM School, Unit-4",
+        "img":"./img/img1.jpeg",
+        "name": "Supti Mam"
       },
       {
         "id": 2,
-        "name": "Raj"
+        "scl":"ODM School",
+        "img":"./img/img2.jpeg",
+        "name": "Viswovinita Mam"
       },
       {
         "id": 3,
-        "name": "Lakshmi"
+        "scl":"DPS Kalinga",
+        "img":"./img/img3.jpeg",
+        "name": "Prabhakar Sir"
       },
       {
         "id": 4,
-        "name": "Ganesh"
+        "scl":"DAV CSpur",
+        "img":"./img/img4.jpeg",
+        "name": "Pradipta Sir"
       },
       {
         "id": 5,
-        "name": "Uma"
+        "scl":"KIIT international School",
+        "img":"./img/img5.jpeg",
+        "name": "Sourav Sir"
       },
       {
         "id": 6,
-        "name": "Amit"
+        "scl":"DAV CSpur",
+        "img":"./img/img6.jpeg",
+        "name": "Satyabrat Sir"
       },
       {
         "id": 7,
-        "name": "Rajesh"
+        "scl":"Sai International School",
+        "img":"./img/img7.jpeg",
+        "name": "Shweta Mam"
       },
       {
         "id": 8,
-        "name": "Ravi"
+        "scl":"BJEM School",
+        "img":"./img/img8.jpeg",
+        "name": "Sunanda Mam"
       },
       {
         "id": 9,
-        "name": "sanjay"
+        "scl":"DM School",
+        "img":"./img/img9.jpeg",
+        "name": "Akhileswar Sir"
       },
       {
         "id": 10,
-        "name": "Dillip"
+        "scl":"Mothers Public School",
+        "img":"./img/img10.jpeg",
+        "name": "Chitra Mam"
       },
       {
-        "id": 11,
-        "name": "Gopal"
-      },
-      {
-        "id": 12,
-        "name": "Kamal"
-      },
-      {
-        "id": 13,
-        "name": "Shankar"
-      },
-      {
-        "id": 14,
-        "name": "Manoj"
-      },
-      {
-        "id": 15,
-        "name": "Rahul"
-      },
-      {
-        "id": 16,
-        "name": "Arun"
-      },
-      {
-        "id": 17,
-        "name": "Omkar"
-      },
-      {
-        "id": 18,
-        "name": "Pratyush"
-      },
-      {
-        "id": 19,
-        "name": "Kiran"
-      },
-      {
-        "id": 20,
-        "name": "Ashok"
+        "id": 10,
+        "scl":"Prabhujee English Medium School",
+        "img":"./img/img11.jpeg",
+        "name": "Ramesh Sir"
       }
     ]
   }
